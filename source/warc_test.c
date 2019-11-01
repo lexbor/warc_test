@@ -225,7 +225,7 @@ dir_files_cb(const lxb_char_t *fullpath, size_t fullpath_len,
 
     /* Create HTTP parser */
     tctx->http = lxb_utils_http_create();
-    tctx->status = lxb_utils_http_init(tctx->http, tctx->warc->mraw);
+    tctx->status = lxb_utils_http_init(tctx->http, NULL);
     if (tctx->status != LXB_STATUS_OK) {
         TO_LOG(tctx, "Failed to init http.");
 
