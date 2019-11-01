@@ -22,7 +22,7 @@ cmake . -DCMAKE_C_FLAGS="-O0 -g -fsanitize=address"
 
 For link lexbor library from not system path:
 ```bash
-cmake . -DCMAKE_CPP_FLAGS="-I/path/to/include/lexbor" -DCMAKE_EXE_LINKER_FLAGS="-L/path/to/lexbor/lib"
+cmake . -DCMAKE_C_FLAGS="-I/path/to/include/lexbor" -DCMAKE_EXE_LINKER_FLAGS="-L/path/to/lexbor/lib"
 ```
 
 
