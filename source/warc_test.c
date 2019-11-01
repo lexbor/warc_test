@@ -277,8 +277,6 @@ dir_files_cb(const lxb_char_t *fullpath, size_t fullpath_len,
 
     prgm_gzip_inflate_destroy(&gzip, false);
     lxb_utils_warc_destroy(tctx->warc, true);
-
-    tctx->http->mraw = NULL;
     lxb_utils_http_destroy(tctx->http, true);
 
     fclose(fh);
