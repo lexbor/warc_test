@@ -12,7 +12,8 @@ int main(void) {
     file(WRITE ${feature_filename} "${FEATUTE_CHECK_STRING}")
 
     try_compile(${out_result} "${CMAKE_BINARY_DIR}" "${feature_filename}"
-        CMAKE_FLAGS "-DCMAKE_C_FLAGS=${CMAKE_C_FLAGS} -DCMAKE_CPP_FLAGS=${CMAKE_CPP_FLAGS}"
+        CMAKE_FLAGS "-DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}"
+                    "-DCMAKE_EXE_LINKER_FLAGS=${CMAKE_EXE_LINKER_FLAGS}"
         LINK_LIBRARIES "${lib_name}"
     )
 
@@ -46,7 +47,8 @@ int main(void) {
     file(WRITE ${feature_filename} "${FEATUTE_CHECK_STRING}")
 
     try_compile(${out_result} "${CMAKE_BINARY_DIR}" "${feature_filename}"
-        CMAKE_FLAGS "-DCMAKE_C_FLAGS=${CMAKE_C_FLAGS} -DCMAKE_CPP_FLAGS=${CMAKE_CPP_FLAGS}"
+        CMAKE_FLAGS "-DCMAKE_C_FLAGS=${CMAKE_C_FLAGS}"
+                    "-DCMAKE_EXE_LINKER_FLAGS=${CMAKE_EXE_LINKER_FLAGS}"
     )
 
     IF(${${out_result}})
