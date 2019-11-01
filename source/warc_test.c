@@ -289,8 +289,6 @@ failed:
 
     prgm_gzip_inflate_destroy(&gzip, false);
     lxb_utils_warc_destroy(tctx->warc, true);
-
-    tctx->http->mraw = NULL;
     lxb_utils_http_destroy(tctx->http, true);
 
     if (fh != NULL) {
