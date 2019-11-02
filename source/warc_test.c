@@ -172,6 +172,9 @@ main(int argc, const char *argv[])
 
     TO_LOG(&ctx, "Total processed: "LEXBOR_FORMAT_Z, ctx.total);
 
+    (void) lxb_html_document_destroy(ctx.document);
+    (void) lxb_html_encoding_destroy(&ctx.html_em, false);
+
     return EXIT_SUCCESS;
 
 failed:
