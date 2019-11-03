@@ -625,7 +625,7 @@ failed:
         TO_LOG(tctx, "HTML header parsing error");
     }
 
-    return LXB_STATUS_ERROR;
+    return LXB_STATUS_NEXT;
 }
 
 static lxb_status_t
